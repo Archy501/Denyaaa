@@ -1,111 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
+/* Загальні стилі */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+/* Основні стилі тіла */
+body {
+    background-color: rgb(98, 211, 17);
+    transition: background-color 1s;
+}
+
+body:hover {
+    background-color: #0c0c67;
+}
+
+/* Стилі заголовка */
 header {
-    background-color: #2196F3;
-    color: white;
+    background-color: #e8cc2e;
+    color: #c9b627;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s;
 }
 
-nav {
-    background-color: #333;
-    padding: 10px;
+header:hover {
+    background-color: #040202;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* Навігаційна панель */
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: #444;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s;
 }
 
-nav ul li {
-    margin: 0 15px;
+.nav-item {
+    color: #1a91d0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.nav-item:hover {
+    background-color: #555; /* Зміна кольору при наведенні */
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
+/* Основний контент */
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #333;
+/* Картки продуктів */
+.card {
+    background-color: #1f5d32;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 30%; /* Ширина картки */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-ul {
-    padding-left: 20px;
+.card:hover {
+    transform: translateY(-10px); /* Підйом картки при наведенні */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Футер */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #bdcfb7;
+    color: #fff;
     text-align: center;
     padding: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s;
 }
 
-
-.carousel {
-    position: relative;
-    overflow: hidden;
-    width: 600px;
-    margin: 0 auto;
+footer:hover {
+    background-color: #444; /* Зміна кольору при наведенні */
 }
 
-.carousel-slide {
-    display: none;
+/* Стилі для продуктів */
+.product {
+    width: 180px; /* Ширина контейнера продукту */
     text-align: center;
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: auto;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #2196F3;
-    color: white;
-    border: none;
     padding: 10px;
-    cursor: pointer;
-}
-
-.carousel-btn.prev {
-    left: 0;
-}
-
-.carousel-btn.next {
-    right: 0;
-}
-
-.carousel-btn:hover {
-    background-color: #0b7dda;
-}
-
-h3{
-    color: white;
+    border: 5px double rgb(184, 30, 30);
+    margin: 10px; /* Відступ між продуктами */
+    float: left; /* Вирівнювання по лівому краю */
 }
